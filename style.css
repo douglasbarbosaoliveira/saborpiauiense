@@ -1,0 +1,724 @@
+/* Reset Básico e Fontes */
+body {
+    font-family: 'Baloo Tammudu 2', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* --- FUNDOS DE PÁGINA ESPECÍFICOS --- */
+
+/* Exemplo de fundo para a Página Home */
+.pagina-home, .pagina-cadastro {
+    background-image: url('bg-img/principal-bg.jpg'); /* Salve uma imagem com este nome */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Exemplo de fundo para a Página de Salgados */
+.pagina-salgados {
+    background-image: url('bg-img/salgados-bg.jpg'); /* Salve uma imagem com este nome */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Adicione mais classes conforme precisar */
+
+/* Container Principal */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Barra do Topo (Logo e Login) */
+.top-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+/* APLIQUE O ESTILO AO PAI */
+.logo {
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;   /* Centraliza na vertical */
+    height: 100%; /* Garante que o pai tenha altura para centralizar verticalmente */
+}
+
+/* O FILHO não precisa de nada especial */
+.logo img {
+    max-height: 80px;
+}
+
+.login-area form {
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.login-area input {
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.login-links a {
+    font-size: 0.8em;
+    color: #555;
+    margin-left: 10px;
+}
+
+/* Navegação Principal */
+.main-nav {
+    background-color: #38a83f; /* Verde da barra */
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.main-nav li a:hover {
+    background-color: #2e8b34;
+}
+
+/* Seções de Conteúdo */
+h2 {
+    color: #333;
+    border-bottom: 3px solid #f0ad4e; /* Amarelo/Laranja do logo */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Cards "Mais Recentes" */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* CÓDIGO ATUALIZADO PARA PADRONIZAR O TAMANHO */
+.card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Proporção 16:9 (widescreen). Mude para 4/3 ou 1/1 (quadrado) se preferir. */
+    object-fit: cover;   /* ESSENCIAL: Preenche a área sem distorcer a imagem. */
+}
+
+.card p {
+    padding: 15px;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.category-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    border-radius: 3px;
+}
+
+/* Seção de Baixo (Recomendação e Restaurante) */
+.bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.recommendation .content, .restaurant-of-the-month .content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.bottom-section img {
+    max-width: 150px;
+    border-radius: 5px;
+}
+
+.bottom-section h3 {
+    margin: 0 0 10px 0;
+    color: #38a83f;
+}
+
+/* Responsividade para Telas Menores */
+@media (max-width: 992px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bottom-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Estilos para a Página da Receita (Bomba) --- */
+
+.recipe-page-container {
+    background-color: #fffaf0; /* Um fundo bege bem claro */
+    padding: 40px 20px;
+}
+
+.recipe-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Coluna da esquerda um pouco maior */
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.description h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-top: 0;
+    border-bottom: 3px solid #f0ad4e;
+    padding-bottom: 10px;
+}
+
+.description p {
+    font-size: 1em;
+    line-height: 1.7;
+    text-align: justify;
+    color: #444;
+}
+
+.details h2 {
+    font-size: 1.8em;
+    margin-top: 0;
+}
+
+.details strong {
+    font-size: 1.1em;
+    margin-top: 20px;
+    display: inline-block;
+    color: #333;
+}
+
+.details ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.details ul li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+/* Galeria de imagens */
+.image-gallery {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* --- Ajustes de Responsividade para a Página da Receita --- */
+@media (max-width: 992px) {
+    .recipe-content {
+        grid-template-columns: 1fr; /* Colunas empilhadas em telas menores */
+    }
+}
+
+/* --- Estilos para a Página de Listagem (Salgados) --- */
+
+.page-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr; /* Coluna principal mais larga que a sidebar */
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.salgados-list h1 {
+    font-size: 2.2em;
+    border-bottom: 3px solid #f0ad4e;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.salgado-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Aplicando fundos diferentes como no design */
+.salgado-item:nth-of-type(1) {
+    background-color: #fff9e8; /* Bege claro para o primeiro item */
+}
+
+.salgado-item:nth-of-type(2) {
+    background-color: #fafafa; /* Cinza bem claro para o segundo item */
+}
+
+
+.salgado-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.salgado-info h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.salgado-info p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.veja-mais {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #38a83f; /* Verde do menu */
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.veja-mais:hover {
+    color: #2e8b34;
+    transform: translateX(5px);
+}
+
+
+/* Barra Lateral */
+.sidebar h2 {
+    font-size: 1.5em;
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.sidebar-item-placeholder {
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* --- Responsividade para a Página de Salgados --- */
+@media (max-width: 992px) {
+    .page-container {
+        grid-template-columns: 1fr; /* Empilha a sidebar embaixo do conteúdo principal */
+    }
+}
+
+@media (max-width: 600px) {
+    .salgado-item {
+        grid-template-columns: 1fr; /* Empilha a imagem em cima do texto */
+        text-align: center;
+    }
+}
+
+/* --- Estilos do Rodapé --- */
+
+.main-footer {
+    background-color: #e1e69b; /* Cor de fundo amarelada/verde do rodapé */
+    padding: 25px 20px;
+    margin-top: 40px; /* Espaçamento acima do rodapé */
+    border-top: 3px solid #f0ad4e; /* Linha superior com a cor laranja do logo */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-height: 70px;
+}
+
+.footer-social a {
+    margin: 0 7px;
+}
+
+.footer-social img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+.footer-info {
+    text-align: right;
+    font-size: 0.9em;
+    color: #444;
+}
+
+.footer-info p {
+    margin: 4px 0;
+}
+
+/* --- Responsividade do Rodapé --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-info, .footer-logo {
+        text-align: center;
+    }
+}
+
+/* --- Estilos para a Página de Cadastro --- */
+
+.cadastro-container {
+    padding: 50px 20px;
+    background-image: url('images/cadastro-bg.jpg'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+}
+
+.form-box {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.92); /* Fundo branco semitransparente */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #333;
+}
+
+.form-box .subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.cadastro-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 30px; /* Espaço entre linhas e colunas */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1; /* Ocupa a largura total */
+}
+
+.form-group.align-right {
+    align-items: flex-end; /* Alinha o botão à direita */
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.submit-btn {
+    background-color: #f0ad4e; /* Laranja do logo */
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #ec9a2c;
+}
+
+/* --- Responsividade para o Formulário --- */
+@media (max-width: 768px) {
+    .cadastro-form {
+        grid-template-columns: 1fr; /* Coluna única em telas menores */
+    }
+}
+
+/* --- Estilos para a Página de Sugestão --- */
+
+.sugestao-container {
+    padding: 50px 20px;
+    background-image: url('images/sugestao-bg.jpg'); /* Nova imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+}
+
+.form-box-sugestao {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semitransparente */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    color: #fff; /* Texto branco para contrastar com o fundo escuro */
+}
+
+.form-box-sugestao h2 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.form-box-sugestao .subtitle {
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.sugestao-form {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 20px;
+}
+
+.form-group-sugestao {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group-sugestao.half-width {
+    width: calc(50% - 10px);
+}
+
+.form-group-sugestao.short-input {
+    flex-grow: 1; /* Permite que cresça para preencher o espaço */
+}
+
+.form-group-sugestao.full-width {
+    width: 100%;
+}
+
+.form-group-sugestao.align-right {
+    align-items: flex-end;
+}
+
+
+.form-group-sugestao label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group-sugestao input,
+.form-group-sugestao textarea,
+.form-group-sugestao select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f4f4f4;
+}
+
+.form-group-sugestao input[readonly] {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+
+.form-group-sugestao textarea {
+    resize: vertical; /* Permite que o usuário redimensione a altura */
+}
+
+/* --- Responsividade para o Formulário de Sugestão --- */
+@media (max-width: 600px) {
+    .form-group-sugestao.half-width {
+        width: 100%;
+    }
+}
+
+/* --- Estilos para a Página de Perfil --- */
+
+.user-info-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-left: 5px solid #38a83f; /* Detalhe com a cor verde do menu */
+}
+
+.user-info-card p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.user-info-card p:last-child {
+    margin-bottom: 0;
+}
+
+.user-info-card strong {
+    color: #333;
+    min-width: 80px;
+    display: inline-block;
+}
+
+/* --- Estilos para a Área de Usuário Logado --- */
+
+.welcome-message {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre o nome e o botão 'Sair' */
+    font-size: 0.9em;
+}
+
+.welcome-message span strong {
+    color: #38a83f; /* Verde para destacar o nome */
+}
+
+#logout-button {
+    background-color: #f44336; /* Vermelho para a ação de sair */
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#logout-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Link de cadastro no formulário de login */
+.login-area .register-link {
+    display: block;
+    text-align: right;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.login-button {
+    background-color: #38a83f; /* Verde do menu */
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.login-button:hover {
+    background-color: #2e8b34;
+}
+
+/* Remove a decoração padrão de links nos cards */
+.card-link {
+    color: inherit; /* Faz o texto do card herdar a cor padrão, em vez de ficar azul */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Efeito opcional para quando o usuário passar o mouse sobre o card */
+.card-link .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Adiciona uma transição suave */
+}
+
+.card-link:hover .card {
+    transform: translateY(-5px); /* Levanta o card um pouco */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15); /* Aumenta a sombra para dar destaque */
+}
+
+.mensagem-sucesso {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Sabor Piauiense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo-sabor-piauiense.png" alt="Logo Sabor Piauiense">
+            </div>
+            <div id="login-area-dinamica" class="login-area">
+                </div>
+        </div>
+    </header>
+
+    <body class="pagina-home"></body>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Pratos típicos</a></li>
+            <li><a href="salgados.html">Salgados</a></li>
+            <li><a href="#">Doces</a></li>
+            <li><a href="#">Bebidas</a></li>
+            <li><a href="#">Onde comer</a></li>
+            <li><a href="sugestao.html">Envie sua sugestão</a></li>
+        </ul>
+    </nav>
+
+    <main class="cadastro-container">
+        <div class="form-box">
+            <h2>Deseja entrar para o clube de amantes da culinária piauiense?</h2>
+            <p class="subtitle">Cadastre-se já em nossa plataforma e obtenha benefícios exclusivos:</p>
+
+            <form id="registration-form" class="cadastro-form">
+                <div class="form-group">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmar-senha">Confirmar Senha:</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" required>
+                </div>
+                <div class="form-group">
+                    <label for="rua">Rua:</label>
+                    <input type="text" id="rua" name="rua" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero" name="numero" required>
+                </div>
+                <div class="form-group">
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento">
+                </div>
+                <div class="form-group">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required readonly>
+                </div>
+                <div class="form-group">
+                    <label for="uf">Estado:</label>
+                    <input type="text" id="uf" name="uf" required readonly>
+                </div>
+                
+                <div class="form-group full-width align-right">
+                    <button type="submit" class="submit-btn">CADASTRAR</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo-sabor-piauiense.png" alt="Logo Sabor Piauiense">
+            </div>
+            <div class="footer-social">
+                <a href="#" title="WhatsApp"><img src="images/whatsapp-icon.png" alt="WhatsApp"></a>
+                <a href="#" title="Instagram"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                <a href="#" title="Facebook"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" title="Twitter"><img src="images/twitter-icon.png" alt="Twitter"></a>
+            </div>
+            <div class="footer-info">
+                <p><strong>Sabor Piauiense</strong></p>
+                <p>Todos os direitos reservados</p>
+                <p>Avenida Frei Serafim, 5000 - Centro - Teresina - Piauí</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
