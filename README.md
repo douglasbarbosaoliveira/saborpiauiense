@@ -35,11 +35,5 @@ Para visualizar o site em sua máquina, siga estes passos:
     ```
 3.  Abra o arquivo `index.html` em seu navegador web de preferência (Google Chrome, Firefox, etc.).
 
-## 🤝 Contribuições
-Este projeto está em desenvolvimento e futuras contribuições são bem-vindas! Se você tiver sugestões, melhorias ou identificar bugs, sinta-se à vontade para abrir uma *issue* ou um *pull request*.
-
-## 📄 Licença
-Este projeto está sob a licença [MIT License](https://opensource.org/licenses/MIT).
-
 ## 👨‍💻 Autor
 - Douglas Barbosa de Oliveira - https://github.com/douglasbarbosaoliveira
